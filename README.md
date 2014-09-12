@@ -54,7 +54,7 @@ Demo app运行后, 可以看到项目正常运行.
 
 查阅`srbmvc`的源码, 按前文的基本逻辑栏来查看代码, 观看其调用链. 代码中有少量的注释,没有解释具体的细节, 只简单标注出此方法实现的目的与功能. 此部分代码的关键点在于从request开始后的调用链, route规则的指定与检查, controller#action的定位 以及render view 部分. 其他皆渣.
 
-请将`simpleapp`与`srbmvc`结合真情阅读.
+请将`simpleapp`与`srbmvc`结合来阅读.
 
 
 ## 一切从Rack开始

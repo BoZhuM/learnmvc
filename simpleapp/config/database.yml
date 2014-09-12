@@ -1,0 +1,9 @@
+# adapter: mysql2
+# host: localhost
+# username: yourusername
+# password: yourpassword
+# database: db_name
+adapter: sqlite3
+database: db/development.sqlite3
+pool: 5
+timeout: 5000

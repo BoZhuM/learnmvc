@@ -9,7 +9,7 @@ module Srbmvc
     module InstanceMethods
       #测试全局方法
       def test_for_helper_method
-          "I can run, because I was defined in `#{__FILE__}`"
+          "I can run, because I was defined in Srbmvc::Helpers module."
       end
 
       #这一部分方法用于实现content_for, yield_content

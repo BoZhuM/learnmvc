@@ -20,7 +20,7 @@
 *注: 已实现的只是rails的九牛一毛. 展示的只是基本的调用链. 及MVC基本的结合方式. 许多功能诸如session, cache, secure, test, configable等都没有实现.*
 
 ## 基本逻辑
-1. 一切从Rack开始. 几乎所有的ruby web framework都是rack app. Rack对象响应call方法, 返回三元素的array, 分别是status code, header, content body. 只要你的项目符合以上三个要求, 就是一个合法的rack app. 可以运行它, 在浏览器访问, 看到完整的响应内容. 所以, 主流程即是request与response的地程. 我们所做的事情就是在中间加入一些自己的东西.
+1. 一切从Rack开始. 几乎所有的ruby web framework都是rack app. Rack对象响应call方法, 返回三元素的array, 分别是status code, header, content body. 只要你的项目符合以上三个要求, 就是一个合法的rack app. 可以运行它, 在浏览器访问, 看到完整的响应内容. 所以, 主流程即是request与response的过程. 我们所做的事情就是在中间加入一些自己的东西.
 + http request 到达 web server 后会即被rack封装, 而后你得到一个env对象. 它包含了客户的请求类型(get/post/put/delete/..), 请求的地址(env['PATH_INFO'], QUERY_STRING等等.
     1. 通过分析env, 我们知道客户的请求是指向哪个controller#action. 而后查看路由表我们的app能否响应此请求.
     + 路由表在新建app对象时通过routes方法来定义, 具体的做法是接受一个block, block内调用`match`, `get`, `post`等方法时, 生成路由规则加入路由表. 路由表里包含路径字符串的匹配正则, controller, action, params等等.
@@ -78,7 +78,7 @@ Rack::Handler::Mongrel.run HelloWorld.new, :Port => 9292
 ```
 直接在terminal里运行`ruby app.rb`, 而后在浏览器里打开`http://localhost:9292`就可以看到返回的内容了.
 
-### 一个使用middleware的rack app可以简单到什么地址?
+### 一个使用middleware的rack app可以简单到什么地步?
 ```ruby
 #config.ru
 class ToUpper

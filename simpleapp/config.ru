@@ -1,6 +1,6 @@
-$LOAD_PATH.unshift(File.join(File.expand_path(__FILE__), "config"))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "config"))
 
-require_relative 'config/application'
+require 'application'
 app = Simpleapp::Application.new
 
 app.routes do

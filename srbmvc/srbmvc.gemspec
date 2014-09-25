@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["zhuboliu@gmail.com"]
   spec.summary       = %q{simple ruby mvc app}
   spec.description   = %q{just a tutorial demo, how to rebuild rails}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/suffering/learnmvc"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

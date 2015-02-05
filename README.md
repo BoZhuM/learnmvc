@@ -13,7 +13,7 @@
 ## 已经实现的功能
 + 以rails MVC的方式组织代码, 以rails的规则命名controller, view, model等之后, 相互之间可以协作.
 + 自定义route, 使用`match`, `resources`, `get`, `post`, `put`, `delete`等方法自定义路由. 如 `match '/products/:id' => 'products#show'`.
-+ 自定义database.yml, 使用`activerecord`作为`ROM`
++ 自定义database.yml, 使用`activerecord`作为`ORM`
 + 实现layout yield, content_for, yield, render, redirect_to等等
 + 实现静态文件serve.
 

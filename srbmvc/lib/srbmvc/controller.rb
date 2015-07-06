@@ -37,7 +37,7 @@ module Srbmvc
       when ActiveRecord::Base
         url = "/#{url.class.name.downcase.pluralize}/#{url.id}"
       else
-        rails 'no object route match'
+        raise 'no object route match'
       end    
       response('', 302, {}).redirect url
       @response.finish
